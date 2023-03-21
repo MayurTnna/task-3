@@ -37,6 +37,7 @@ const postReducer = (state = initialState, action) => {
       //This code first(index) searches for the index of the object with the specified ID in the state.posts array. If the object is found, it is removed using the splice() method. The if statement ensures that the object is only removed if it actually exists in the array. If the findIndex() method returns -1, it means that no object with the specified ID was found, so the code does nothing.
       case types.FETCH_POST_EDIT:
           const updatedDetail = state.posts.findIndex(item=>item.id===action.payload.id)
+          console.log(updatedDetail);
            state.posts[updatedDetail].name = action.payload.name
            state.posts[updatedDetail].email = action.payload.email
            state.posts[updatedDetail].phone = action.payload.phone
@@ -45,7 +46,7 @@ const postReducer = (state = initialState, action) => {
                 ...state,
                 posts:[...state.posts]
             }
-    default:
+    default:  
       return state;
   }
 };

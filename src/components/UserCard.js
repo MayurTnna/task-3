@@ -10,7 +10,6 @@ import {
 import "../assets/scss/UserCard.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPostDelete } from "../redux/actions/action";
-// import EditDetail from "./EditDetail";
 import EditModal from "./EditCardModal";
 
 
